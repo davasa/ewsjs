@@ -243,7 +243,7 @@ var EWS = function() {
 	processCall = function(params, headers, data, url) {
 		var h, res, i, j, match, key, processed = false, p, ret = null, async;
 		params = params || {};
-		async = params.async || true;
+		async = params.async !== false;
 		url = url ? url : params.url;
 		for (i=0;i<rewrites.length;i++) {
 			match = rewrites[i].re.exec(url);
