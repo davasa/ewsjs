@@ -122,7 +122,7 @@ var EWS = function() {
 		this.open = function(method,url,async,user,password) {
 			params.method = method || "GET";
 			params.url = url;
-			params.async = async || true;
+			params.async = async !== false;
 			if (user) {
 				params.user = user;
 			}
